@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikalp Chaudhary | Portfolio & AI Engineer</title>
+    <meta name="description"
+        content="Portfolio of Vikalp Chaudhary, Computer Science student specializing in Artificial Intelligence. Exploring the intersection of interactive frontend and machine learning.">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../CSS/imports.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- Phosphor Icons (CDN) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+
+    <!-- 3D Canvas Background -->
+    <div class="canvas-container">
+        <canvas id="webgl-canvas"></canvas>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo" id="nav-logo">
+                Vikalp Chaudhary<span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#" id="link-home">Home</a></li>
+                <li><a href="#about" id="link-about">About</a></li>
+                <li><a href="#projects" id="link-projects">Projects</a></li>
+                <li><a href="#contact" id="link-contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="badge reveal-element active">
+                    <span class="badge-dot"></span>
+                    Available for Internships & Projects
+                </div>
+                <h1 class="reveal-element active">
+                    Designing interfaces that feel <span class="serif-italic text-accent-green">alive</span>.
+                </h1>
+                <p class="reveal-element active">
+                    Hi, I'm Vikalp, a Computer Science & AI student crafting premium, minimal digital solutions. I
+                    bridge the gap between intelligent systems and human interaction.
+                </p>
+                <div class="btn-group reveal-element active">
+                    <a href="#projects" class="btn btn-primary" id="hero-btn-projects">
+                        View My Work <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" id="hero-btn-contact">
+                        Get In Touch <i class="ph ph-chat-circle"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <i class="ph ph-arrow-down"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <span class="section-subtitle">01. About Me</span>
+                    <h2 class="section-title">The intersection of code and intelligence.</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image-wrapper reveal-element">
+                        <div class="about-image-frame">
+                            <img src="../Images/Vikalp Chaudhary.png" alt="Vikalp Chaudhary" class="profile-img"
+                                id="profile-pic">
+                        </div>
+                        <div class="about-image-decorations">
+                            <div class="decor-circle decor-circle-1"></div>
+                            <div class="decor-circle decor-circle-2"></div>
+                        </div>
+                    </div>
+                    <div class="about-info reveal-element">
+                        <h3>Hi, I'm Vikalp.</h3>
+                        <p>
+                            I am currently pursuing a B.Tech in Computer Science and Engineering with a specialization
+                            in Artificial Intelligence at Bennett University. I love building minimal, beautiful
+                            websites and solving complex problems with machine learning.
+                        </p>
+                        <p>
+                            My approach focuses on clean typography, intuitive user flows, and subtle interactive
+                            details that elevate digital experiences into something memorable.
+                        </p>
+
+                        <!-- Education Card -->
+                        <div class="education-card">
+                            <div class="edu-icon-box">
+                                <i class="ph ph-graduation-cap"></i>
+                            </div>
+                            <div class="edu-details">
+                                <h4>B.Tech in Computer Science & Engineering</h4>
+                                <p class="university">Bennett University (Specialization in AI)</p>
+                                <span class="timeline">2023 — 2027</span>
+                            </div>
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="skills-wrapper">
+                            <h4 class="skills-title">Core Toolkit</h4>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Google MediaPipe</span>
+                                <span class="skill-tag">OpenCV</span>
+                                <span class="skill-tag">Three.js</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">HTML5 / CSS3</span>
+                                <span class="skill-tag">Git & GitHub</span>
+                                <span class="skill-tag">TensorFlow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <span class="section-subtitle">02. Selected Works</span>
+                    <h2 class="section-title">Turning concepts into software.</h2>
+                </div>
+                <div class="projects-grid">
+
+                    <!-- Project 1: UniBites -->
+                    <article class="project-card reveal-element" id="project-unibites">
+                        <div class="project-header-visual">
+                            <div class="project-visual-element unibites">
+                                <i class="ph ph-cookie"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag tech-frontend">HTML / CSS / JS</span>
+                                <span class="project-tag tech-backend">Python Backend</span>
+                            </div>
+                            <h3>UniBites <span class="text-accent-coral"><i class="ph ph-arrow-up-right"></i></span>
+                            </h3>
+                            <p>
+                                A campus-focused food outlet directory and dining system built to connect Bennett
+                                University students with campus eateries. Features a clean, mini-Zomato interface
+                                tailored for student lifestyles.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="ph ph-check-circle"></i> Digital menus & outlet status indicators</li>
+                                <li><i class="ph ph-check-circle"></i> Simulated checkout and ordering tracker</li>
+                                <li><i class="ph ph-check-circle"></i> Student rating and reviews system</li>
+                            </ul>
+                            <div class="project-link-box">
+                                <span class="project-link">Web Application</span>
+                                <a href="https://github.com/vikalpchaudhary" target="_blank" class="project-link"
+                                    id="btn-github-unibites">
+                                    GitHub <i class="ph ph-github-logo"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: SignLink -->
+                    <article class="project-card reveal-element" id="project-signlink">
+                        <div class="project-header-visual">
+                            <div class="project-visual-element signlink">
+                                <i class="ph ph-hand-eye"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag tech-ai">Google MediaPipe</span>
+                                <span class="project-tag tech-backend">Python & OpenCV</span>
+                            </div>
+                            <h3>SignLink <span class="text-accent-green"><i class="ph ph-arrow-up-right"></i></span>
+                            </h3>
+                            <p>
+                                An advanced translation tool enabling real-time conversion of Indian Sign Language (ISL)
+                                and American Sign Language (ASL) gesture inputs via live camera streams into textual
+                                language.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="ph ph-check-circle"></i> Real-time multi-gesture tracking & detection</li>
+                                <li><i class="ph ph-check-circle"></i> Integrates Indian Sign Language dictionary</li>
+                                <li><i class="ph ph-check-circle"></i> Expandable custom dictionary storage</li>
+                            </ul>
+                            <div class="project-link-box">
+                                <span class="project-link">ML Application</span>
+                                <a href="https://github.com/vikalpchaudhary" target="_blank" class="project-link"
+                                    id="btn-github-signlink">
+                                    GitHub <i class="ph ph-github-logo"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <span class="section-subtitle">03. Connect</span>
+                    <h2 class="section-title">Let's create something great.</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info reveal-element">
+                        <h3>Let's start a conversation.</h3>
+                        <p>
+                            Whether you are interested in a collaboration, have questions about my projects, or just
+                            want to chat about AI and web design—drop me a line.
+                        </p>
+
+                        <div class="contact-methods">
+                            <!-- Email copy button -->
+                            <div class="contact-method-card" id="email-copy-card">
+                                <div class="method-details">
+                                    <div class="method-icon">
+                                        <i class="ph ph-envelope"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <span>Email Me</span>
+                                        <p id="email-text">vikalpchaudhary2007@gmail.com</p>
+                                    </div>
+                                </div>
+                                <button class="method-copy-btn" id="email-copy-btn" aria-label="Copy email">
+                                    <i class="ph ph-copy" id="email-copy-icon"></i>
+                                </button>
+                            </div>
+
+                            <!-- LinkedIn Link -->
+                            <a href="https://www.linkedin.com/in/vikalp-chaudhary-354196322" target="_blank"
+                                class="contact-method-card" id="btn-linkedin">
+                                <div class="method-details">
+                                    <div class="method-icon">
+                                        <i class="ph ph-linkedin-logo"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <span>LinkedIn</span>
+                                        <p>vikalp-chaudhary</p>
+                                    </div>
+                                </div>
+                                <div class="method-copy-btn">
+                                    <i class="ph ph-arrow-up-right"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Social Buttons -->
+                        <div class="social-links">
+                            <a href="https://github.com/vikalpchaudhary" target="_blank" class="social-btn"
+                                id="btn-github-social" aria-label="GitHub">
+                                <i class="ph ph-github-logo"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/vikalp-chaudhary-354196322" target="_blank"
+                                class="social-btn" id="btn-linkedin-social" aria-label="LinkedIn">
+                                <i class="ph ph-linkedin-logo"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-card-box reveal-element">
+                        <form class="contact-form" id="contact-form">
+                            <h4>Send a message</h4>
+                            <div class="form-group">
+                                <label for="form-name" class="form-label">Full Name</label>
+                                <input type="text" id="form-name" class="form-input" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email" class="form-label">Email Address</label>
+                                <input type="email" id="form-email" class="form-input" placeholder="you@example.com"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message" class="form-label">Your Message</label>
+                                <textarea id="form-message" class="form-input"
+                                    placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="btn-submit-message">
+                                Send Message <i class="ph ph-paper-plane-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Vikalp Chaudhary. Built with passion & Three.js.</p>
+        </div>
+    </footer>
+
+
+
+    <!-- Custom Scripts -->
+    <script src="../JS/app.js"></script>
+    <script src="../JS/animations.js"></script>
+</body>
+
+</html>
