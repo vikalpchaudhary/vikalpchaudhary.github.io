@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         warmLinen: 'rgba(228, 226, 220, 0.7)'
     };
 
-    // 7. Define Blob Position States per section (Hero, About, Projects, Contact)
+    // 7. Define Blob Position States per section (Hero, About, Projects, Resume, Contact)
     // Coords are represented as percentages of viewport size (0 to 1)
     const blobStates = [
         // Section 0: Hero (Blobs grouped towards the right / center)
@@ -76,7 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
             { x: 0.2, y: 0.8, radius: 300, color: COLORS.peachCoral },
             { x: 0.7, y: 0.6, radius: 350, color: COLORS.warmLinen }
         ],
-        // Section 3: Contact (Centered glow spots)
+        // Section 3: Resume (Spotlight on the right with a diagonal layout)
+        [
+            { x: 0.2, y: 0.3, radius: 260, color: COLORS.warmLinen },
+            { x: 0.85, y: 0.5, radius: 320, color: COLORS.sageGreen },
+            { x: 0.5, y: 0.8, radius: 280, color: COLORS.peachCoral }
+        ],
+        // Section 4: Contact (Centered glow spots)
         [
             { x: 0.5, y: 0.75, radius: 340, color: COLORS.sageGreen },
             { x: 0.5, y: 0.25, radius: 280, color: COLORS.peachCoral },

@@ -157,4 +157,5 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = `mailto:${mailtoEmail}?subject=${subject}&body=${body}`;
         });
     }
+
 });

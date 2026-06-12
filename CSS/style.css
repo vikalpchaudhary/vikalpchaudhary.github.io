@@ -1113,3 +1113,320 @@ textarea.form-input {
     font-size: 1.85rem;
   }
 }
+
+/* ==========================================
+   INTERACTIVE RESUME SECTION (SCREEN VIEW)
+   ========================================== */
+.resume {
+  padding: 8rem 0;
+  position: relative;
+}
+
+.resume-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 3.5rem;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 992px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+.resume-group {
+  margin-bottom: 3.5rem;
+}
+
+.resume-group:last-child {
+  margin-bottom: 0;
+}
+
+.resume-group-title {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1.5px solid #E4E2DC;
+  padding-bottom: 0.75rem;
+}
+
+.resume-group-title i {
+  color: var(--accent-green);
+}
+
+.resume-timeline {
+  position: relative;
+  border-left: 2px solid var(--accent-green-light);
+  padding-left: 2rem;
+  margin-left: 0.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: calc(-2rem - 6px);
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-green);
+  border: 2px solid var(--bg-color);
+  box-shadow: 0 0 0 4px var(--accent-green-light);
+  transition: var(--transition-fast);
+}
+
+.timeline-item:hover .timeline-dot {
+  background-color: var(--accent-coral);
+  box-shadow: 0 0 0 6px var(--accent-coral-light);
+  transform: scale(1.2);
+}
+
+.timeline-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.timeline-subtitle {
+  font-size: 0.9rem;
+  color: var(--accent-green);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.skills-category-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.skill-category {
+  background: var(--glass-bg);
+  border: 1.5px solid var(--glass-border);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: var(--transition-medium);
+}
+
+.skill-category:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.category-name {
+  display: block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.resume-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.resume-highlights li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.resume-highlights li i {
+  margin-top: 0.25rem;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+
+/* ==========================================
+   PRINT-ONLY RESUME STYLES (PDF VIEW)
+   ========================================== */
+.print-only {
+  display: none;
+}
+
+@media print {
+  /* Set A4 portrait page layout with standard margins */
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm 1.5cm;
+  }
+
+  /* Reset layout constraints & styling */
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 9.5pt !important;
+    line-height: 1.35 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Hide screen elements */
+  main, header, footer, .canvas-container, .custom-cursor, #navbar, .scroll-indicator, .btn, .resume-actions {
+    display: none !important;
+  }
+
+  /* Display print resume */
+  #print-resume-layout.print-only {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 99999 !important;
+  }
+
+  .print-header {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .print-header h1 {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 20pt !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 0.15rem !important;
+    color: #000000 !important;
+  }
+
+  .print-subtitle {
+    font-size: 10.5pt !important;
+    color: #444444 !important;
+    margin-bottom: 0.35rem !important;
+    font-weight: 500 !important;
+  }
+
+  .print-contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    font-size: 8.5pt !important;
+    color: #555555 !important;
+  }
+
+  .print-contact-info .divider {
+    color: #cccccc !important;
+  }
+
+  .print-section {
+    margin-bottom: 1.1rem;
+  }
+
+  .print-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .print-section h2 {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 11pt !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em !important;
+    margin-bottom: 0.15rem !important;
+    color: #000000 !important;
+  }
+
+  .print-divider {
+    border: 0 !important;
+    height: 1px !important;
+    background: #222222 !important;
+    margin-bottom: 0.45rem !important;
+  }
+
+  .print-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .print-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .print-item-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9pt !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  .print-item-header strong {
+    font-weight: 700 !important;
+  }
+
+  .print-item-subheader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt !important;
+    color: #333333 !important;
+    font-style: italic !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .print-list {
+    list-style-type: disc !important;
+    margin-left: 1.2rem !important;
+    font-size: 8.5pt !important;
+    color: #222222 !important;
+  }
+
+  .print-list li {
+    margin-bottom: 0.12rem !important;
+  }
+
+  .print-skills-grid {
+    font-size: 8.5pt !important;
+    color: #222222 !important;
+  }
+
+  .print-skills-grid p {
+    margin-bottom: 0.25rem !important;
+    font-size: 8.5pt !important;
+    color: #222222 !important;
+  }
+
+  .print-skills-grid p strong {
+    color: #000000 !important;
+  }
+}
